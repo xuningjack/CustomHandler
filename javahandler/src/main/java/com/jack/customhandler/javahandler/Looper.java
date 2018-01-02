@@ -1,4 +1,4 @@
-package customhandler.jack.com.javahandler;
+package com.jack.customhandler.javahandler;
 
 
 

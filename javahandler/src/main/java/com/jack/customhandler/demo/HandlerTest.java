@@ -1,4 +1,8 @@
-package customhandler.jack.com.javahandler;
+package com.jack.customhandler.demo;
+
+import com.jack.customhandler.javahandler.Handler;
+import com.jack.customhandler.javahandler.Looper;
+import com.jack.customhandler.javahandler.Message;
 
 import java.util.UUID;
 
