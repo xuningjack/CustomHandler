@@ -8,8 +8,8 @@ package com.jack.customhandler.javahandler;
  */
 public class Looper {
 
-    static final ThreadLocal<Looper> sThreadLocal = new ThreadLocal<Looper>();
-    MessageQueue mQueue;
+    private static final ThreadLocal<Looper> sThreadLocal = new ThreadLocal<Looper>();
+    protected static MessageQueue mQueue;
 
 
     public Looper(){
@@ -31,8 +31,7 @@ public class Looper {
      */
     public static void prepare(){
         if(sThreadLocal.get() != null){   //主线程只有一个looper对象
-            throw new RuntimeException("Only one Looper may be " +
-                    "created per thread");
+            throw new RuntimeException("Only one Looper may be created per thread");
         }
         //当前线程绑定一个Looper对象
         sThreadLocal.set(new Looper());
